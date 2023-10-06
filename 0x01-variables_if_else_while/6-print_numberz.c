@@ -14,7 +14,7 @@ int number = 0;
 
 while (number < 10)
 {
-putchar(number + 48); 
+putchar(number + 48);
 number++;
 }
 
