@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <string.h>
+#include <errno.h>
+
+/**
+* main - Entry point of the program
+*
+* Description: This program prints a specific message to the standard error.
+*
+* Return: Always 1 (indicating an error)
+*/
+int main(void)
+{
+ssize_t written;
+const char *message = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+
+written = write(STDERR_FILENO, message, strlen(message));
+if (written == -1)
+{
+perror("write");
+return (1);
+}
+
+return (1);
+}
